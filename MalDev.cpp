@@ -229,16 +229,10 @@ namespace MalDev
 			string FolderKeyLog = "mkdir " + workfolder;
 			system(FolderKeyLog.c_str());
 
-			if (!showfolder)
-			{
-				string ShowFolder = "attrib +h +s +r " + workfolder;
-				system(ShowFolder.c_str());
-			}
-			else
-			{
-				string ShowFolder = "attrib -h -s -r " + workfolder;
-				system(ShowFolder.c_str());
-			}
+			if (!showfolder) string ShowFolder = "attrib +h +s +r " + workfolder;
+			else string ShowFolder = "attrib -h -s -r " + workfolder;
+			system(ShowFolder.c_str());
+			
 			return true;
 		}
 		catch (...) { return false; }
